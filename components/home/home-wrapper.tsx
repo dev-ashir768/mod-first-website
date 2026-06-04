@@ -4,6 +4,7 @@ import { PromotionalBanners } from "@/components/home/promotional-banners";
 import { OurOrderProcess } from "@/components/home/our-order-process";
 import ProductSection from "../product/product-section";
 import { VideoSection } from "@/components/home/video-section";
+import { NewsletterSection } from "@/components/home/newsletter-section";
 
 const products = [
     {
@@ -66,6 +67,7 @@ const HomeWrapper = () => {
             <OurOrderProcess />
             <ProductSection data={supply_products} title="DTF Supplies Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
             <VideoSection />
+            <NewsletterSection />
         </>
     )
 }
