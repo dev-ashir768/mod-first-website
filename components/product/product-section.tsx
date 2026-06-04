@@ -22,7 +22,7 @@ interface ProductSectionProps {
 
 const ProductSection: React.FC<ProductSectionProps> = ({ data, title, description }) => {
   return (
-    <section className="container w-full pt-8 md:pt-12 lg:pt-16 flex flex-col items-center">
+    <section className="container w-full pt-10 md:pt-12 lg:pt-16 flex flex-col items-center">
       <div className="text-center mb-6 md:mb-10">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 tracking-tight">{title}</h2>
         <p className="text-[#464545] text-lg">{description}</p>

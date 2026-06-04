@@ -2,17 +2,17 @@ import Image from "next/image"
 
 const steps = [
   {
-   img_path: "/images/icons/gallery.svg",
+    img_path: "/images/icons/gallery.svg",
     title: "Choose Your Perfect Product",
     description: "Browse our wide range of custom T-shirts, hoodies, banners, yard signs, business cards, embroidery, and DTF UV DTF transfers. Select the product type, size, and style that matches your vision. Every option is designed to give you creative freedom and professional results."
   },
   {
-   img_path: "/images/icons/upload.svg",
+    img_path: "/images/icons/upload.svg",
     title: "Upload or Create Your Design",
     description: "Browse our wide range of custom T-shirts, hoodies, banners, yard signs, business cards, embroidery, and DTF UV DTF transfers. Select the product type, size, and style that matches your vision. Every option is designed to give you creative freedom and professional results."
   },
   {
-   img_path: "/images/icons/cloud.svg",
+    img_path: "/images/icons/cloud.svg",
     title: "Confirm and Place Your Order",
     description: "Browse our wide range of custom T-shirts, hoodies, banners, yard signs, business cards, embroidery, and DTF UV DTF transfers. Select the product type, size, and style that matches your vision. Every option is designed to give you creative freedom and professional results."
   },
@@ -25,8 +25,8 @@ const steps = [
 
 export function OurOrderProcess() {
   return (
-    <section className="relative w-full pt-8 md:pt-12 lg:pt-16  overflow-hidden">
-      <div className="bg-black py-8 md:py-12 lg:py-16 ">
+    <section className="relative w-full pt-10 md:pt-12 lg:pt-16  overflow-hidden">
+      <div className="bg-black py-10 md:py-12 lg:py-16 ">
         {/* Decorative gradient glow */}
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-primary opacity-40 blur-[120px] rounded-full pointer-events-none translate-x-1/3 translate-y-1/3" />
 

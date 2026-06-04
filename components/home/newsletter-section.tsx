@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function NewsletterSection() {
   return (
-    <section className="container py-8 md:py-12 lg:py-16">
+    <section className="container py-10 md:py-12 lg:py-16">
       <div className="w-full rounded-[24px] md:rounded-[32px] p-8 md:p-12 lg:p-16 flex flex-col items-center justify-center bg-linear-to-b from-[#D3F52E] via-[#e8fa85] to-white/90">
         <h2 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-black mb-4 text-center tracking-tight">
           Ready To Elevate Your Print Brand?

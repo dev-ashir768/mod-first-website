@@ -3,14 +3,14 @@ import { Button } from "../ui/button"
 
 export function VideoSection() {
   return (
-    <section className="container pt-8 md:pt-12 lg:pt-16">
+    <section className="container pt-10 md:pt-12 lg:pt-16">
       <div className="relative w-full rounded-[24px] md:rounded-[32px] overflow-hidden bg-zinc-900 aspect-video max-h-[600px] flex items-center justify-center">
         {/* Background Video */}
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
           {/* Replace this with your actual video source */}

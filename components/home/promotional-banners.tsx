@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function PromotionalBanners() {
   return (
-    <section className="container w-full pt-8 md:pt-12 lg:pt-16 flex flex-col gap-6">
+    <section className="container w-full pt-10 md:pt-12 lg:pt-16 flex flex-col gap-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Left Card */}
         <div className="bg-[#F8D5F0] rounded-[24px] p-8 md:p-10 relative overflow-hidden min-h-[340px] flex flex-col justify-center">

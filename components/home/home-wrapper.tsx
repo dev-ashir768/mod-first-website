@@ -1,10 +1,12 @@
 import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/home/hero";
 import { PromotionalBanners } from "@/components/home/promotional-banners";
 import { OurOrderProcess } from "@/components/home/our-order-process";
 import ProductSection from "../product/product-section";
 import { VideoSection } from "@/components/home/video-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
+import { ModfirstRevealFooter } from "@/components/home/modfirst-reveal-footer";
 
 const products = [
     {
@@ -59,16 +61,15 @@ const supply_products = [
 
 const HomeWrapper = () => {
     return (
-        <>
-            <Header />
-            <Hero />
-            <PromotionalBanners />
-            <ProductSection data={products} title="Our Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
-            <OurOrderProcess />
-            <ProductSection data={supply_products} title="DTF Supplies Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
-            <VideoSection />
-            <NewsletterSection />
-        </>
+            <>
+                <Hero />
+                <PromotionalBanners />
+                <ProductSection data={products} title="Our Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
+                <OurOrderProcess />
+                <ProductSection data={supply_products} title="DTF Supplies Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
+                <VideoSection />
+                <NewsletterSection />
+            </>
     )
 }
 
