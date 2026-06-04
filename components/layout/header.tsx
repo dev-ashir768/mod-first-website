@@ -5,7 +5,7 @@ import SearchBar from "../shared/search-bar";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between gap-4">
+      <div className="container h-20 flex items-center justify-between gap-4">
         {/* Left: Menu & Logo */}
         <div className="flex items-center gap-4">
           <Button size="icon-lg" variant="ghost">

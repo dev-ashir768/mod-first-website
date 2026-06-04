@@ -1,11 +1,9 @@
-import { Header } from "@/components/layout/header";
-import { Hero } from "@/components/sections/hero";
+import HomeWrapper from "@/components/home/home-wrapper";
 
 export default function Home() {
   return (
     <main className="flex flex-col flex-1 min-h-screen">
-      <Header />
-      <Hero />
+      <HomeWrapper />
     </main>
   );
 }
