@@ -120,7 +120,7 @@ export function CustomerFeedback() {
                     </h4>
                     <div className="flex gap-0.5 mt-1">
                       {[...Array(item.rating)].map((_, i) => (
-                        <Image src="/images/icons/star.svg" alt="Star" width={16} height={16} />
+                        <Image src="/images/icons/star.svg" alt="Star" key={i} width={16} height={16} />
                       ))}
                     </div>
                   </div>

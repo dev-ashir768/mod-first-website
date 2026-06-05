@@ -3,7 +3,7 @@
 import { Hero } from "@/components/home/hero";
 import { PromotionalBanners } from "@/components/home/promotional-banners";
 import { OurOrderProcess } from "@/components/home/our-order-process";
-import ProductSection from "../product/product-section";
+import ProductCarousel from "../product/product-carousel";
 import { VideoSection } from "@/components/home/video-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
 import { CustomerFeedback } from "@/components/home/customer-feedback";
@@ -65,9 +65,9 @@ const HomeWrapper = () => {
             <>
                 <Hero />
                 <PromotionalBanners />
-                <ProductSection data={products} title="Our Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
+                <ProductCarousel data={products} title="Our Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
                 <OurOrderProcess />
-                <ProductSection data={supply_products} title="DTF Supplies Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
+                <ProductCarousel data={supply_products} title="DTF Supplies Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
                 <VideoSection />
                 <CustomerFeedback />
                 <BlogSection />

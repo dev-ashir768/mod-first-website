@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import SearchBar from "../shared/search-bar";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -12,13 +13,15 @@ export function Header() {
             <Image src="/images/icons/3-bars.svg" alt="3-bars" width={24} height={24} />
           </Button>
           <div className="relative w-32 h-8 lg:w-48 lg:h-11">
-            <Image
-              src="/images/branding/logo-dark.svg"
-              alt="Modfirst Logo"
-              fill
-              className="object-contain object-left"
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/images/branding/logo-dark.svg"
+                alt="Modfirst Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </Link>
           </div>
         </div>
 
