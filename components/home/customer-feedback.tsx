@@ -40,9 +40,9 @@ const feedbacks = [
 
 export function CustomerFeedback() {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container pt-10 md:pt-12 lg:pt-16">
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-6">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-10 gap-6">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
           Our Customer Feedback
         </h2>
@@ -58,7 +58,7 @@ export function CustomerFeedback() {
             <div className="flex flex-col">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Image src="/images/icons/star.svg" alt="Star" width={16} height={16} />
+                  <Image src="/images/icons/star.svg" alt="Star" key={i} width={16} height={16} />
                 ))}
               </div>
               <span className="text-xs text-gray-500 mt-1">
@@ -79,7 +79,7 @@ export function CustomerFeedback() {
             <div className="flex flex-col">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Image src="/images/icons/star.svg" alt="Star" width={16} height={16} />
+                  <Image src="/images/icons/star.svg" alt="Star" key={i} width={16} height={16} />
                 ))}
               </div>
               <span className="text-xs text-gray-500 mt-1">

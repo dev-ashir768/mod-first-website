@@ -28,10 +28,9 @@ const blogs = [
 
 export function BlogSection() {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container pt-10 md:pt-12 lg:pt-16">
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-black mb-10 md:mb-14"
-        style={{ fontFamily: "serif" }} // Inline style for serif font to match the image, alternatively remove if custom fonts are handled globally
+        className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 md:mb-10 tracking-tight text-center"
       >
         Blog
       </h2>
