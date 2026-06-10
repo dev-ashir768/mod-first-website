@@ -81,7 +81,7 @@ export function PromotionalBanners() {
 
             <motion.div variants={textItem}>
               <p className="text-xl text-black mb-2">Only Price</p>
-              <p className="text-4xl md:text-5xl font-bold text-black tracking-tight">Rs. 24,00</p>
+              <p className="text-4xl md:text-5xl font-bold text-black tracking-tight">$24.00</p>
             </motion.div>
           </div>
           <div className="absolute right-0 top-20 bottom-0 flex items-center justify-end pointer-events-none">

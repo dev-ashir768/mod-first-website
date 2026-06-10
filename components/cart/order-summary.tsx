@@ -10,7 +10,7 @@ export const OrderSummary = () => {
       <div className="flex flex-col gap-4 text-black text-sm md:text-base">
         <div className="flex justify-between items-center">
           <span className="text-gray-600">Sub Total:</span>
-          <span className="font-bold">Rs. 5,650</span>
+          <span className="font-bold">$5,650</span>
         </div>
         <div className="flex justify-between items-center">
           <span className="text-gray-600">Shipping:</span>
@@ -18,7 +18,7 @@ export const OrderSummary = () => {
         </div>
         <div className="flex justify-between items-center">
           <span className="text-gray-600">Tax (Estimated 5%)</span>
-          <span className="font-bold">Rs. 210</span>
+          <span className="font-bold">$210</span>
         </div>
       </div>
 
@@ -26,7 +26,7 @@ export const OrderSummary = () => {
 
       <div className="flex justify-between items-center mb-8">
         <span className="font-bold text-black text-lg md:text-xl">Total</span>
-        <span className="font-bold text-black text-xl md:text-2xl">Rs. 5,860</span>
+        <span className="font-bold text-black text-xl md:text-2xl">$5,860</span>
       </div>
 
       <Button size="xl" className="w-full mb-4">
