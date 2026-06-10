@@ -42,7 +42,9 @@ export function Header() {
           </Button>
 
           <Button size="icon-lg" variant="ghost">
-            <Image src="/images/icons/cart.svg" alt="Cart" width={24} height={24} />
+            <Link href="/cart">
+              <Image src="/images/icons/cart.svg" alt="Cart" width={24} height={24} />
+            </Link>
           </Button>
         </div>
       </div>

@@ -8,6 +8,9 @@ import { VideoSection } from "@/components/home/video-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
 import { CustomerFeedback } from "@/components/home/customer-feedback";
 import { BlogSection } from "@/components/home/blog-section";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { WhyModfirst } from "@/components/home/why-modfirst";
+import { FastProduction } from "@/components/home/fast-production";
 
 const products = [
     {
@@ -65,13 +68,15 @@ const HomeWrapper = () => {
             <>
                 <Hero />
                 <PromotionalBanners />
-                <ProductCarousel data={products} title="Our Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
+                <ScrollReveal><ProductCarousel data={products} title="Our Products" description="From small business advertising to big event displays, Modfirst delivers bold." /></ScrollReveal>
                 <OurOrderProcess />
-                <ProductCarousel data={supply_products} title="DTF Supplies Products" description="From small business advertising to big event displays, Modfirst delivers bold." />
-                <VideoSection />
-                <CustomerFeedback />
-                <BlogSection />
-                <NewsletterSection />
+                <ScrollReveal><ProductCarousel data={supply_products} title="DTF Supplies Products" description="From small business advertising to big event displays, Modfirst delivers bold." /></ScrollReveal>
+                <ScrollReveal><VideoSection /></ScrollReveal>
+                <ScrollReveal><WhyModfirst /></ScrollReveal>
+                <ScrollReveal><FastProduction /></ScrollReveal>
+                <ScrollReveal><CustomerFeedback /></ScrollReveal>
+                <ScrollReveal><BlogSection /></ScrollReveal>
+                <ScrollReveal><NewsletterSection /></ScrollReveal>
             </>
     )
 }

@@ -48,7 +48,7 @@ export function CustomerFeedback() {
         </h2>
 
         {/* Ratings */}
-        <div className="flex flex-wrap items-center gap-8">
+        <div className="flex flex-wrap items-center gap-4 lg:gap-8">
           {/* Google Rating */}
           <div className="flex items-center gap-2">
             <Image src="/images/icons/google.svg" alt="Facebook"

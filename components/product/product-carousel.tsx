@@ -39,7 +39,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ data, title, descript
         >
           <CarouselContent className="md:-ml-6">
             {data.map((product, index) => (
-              <CarouselItem key={index} className="md:pl-6 basis-1/2 lg:basis-1/3 xl:basis-1/4">
+              <CarouselItem key={index} className="md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                 <ProductCard data={product} />
               </CarouselItem>
             ))}

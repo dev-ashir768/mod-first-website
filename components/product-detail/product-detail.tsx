@@ -25,6 +25,12 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    type CarouselApi,
+} from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 
 const productImages = [
@@ -35,6 +41,20 @@ const productImages = [
 ];
 const ProductDetail = () => {
     const [activeThumb, setActiveThumb] = useState(0);
+    const [api, setApi] = useState<CarouselApi>();
+
+    React.useEffect(() => {
+        if (!api) return;
+
+        api.on("select", () => {
+            setActiveThumb(api.selectedScrollSnap());
+        });
+    }, [api]);
+
+    const onThumbClick = (index: number) => {
+        setActiveThumb(index);
+        api?.scrollTo(index);
+    };
     
     return (
         <>
@@ -64,7 +84,7 @@ const ProductDetail = () => {
                             {productImages.map((img, index) => (
                                 <button
                                     key={index}
-                                    onClick={() => setActiveThumb(index)}
+                                    onClick={() => onThumbClick(index)}
                                     className={cn(
                                         "relative w-20 h-20 sm:w-full sm:h-[100px] rounded-xl overflow-hidden border-2 transition-all shrink-0",
                                         activeThumb === index ? "border-[#C8E100]" : "border-transparent"
@@ -82,13 +102,23 @@ const ProductDetail = () => {
 
                         {/* Main Image */}
                         <div className="order-1 sm:order-2 flex-1 rounded-3xl relative overflow-hidden aspect-square sm:aspect-auto sm:h-[500px] lg:h-[600px] flex items-center justify-center bg-gray-100">
-                            <Image
-                                src={productImages[activeThumb]}
-                                alt="Main Product Image"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
+                            <Carousel setApi={setApi} opts={{ loop: true }} className="w-full h-full">
+                                <CarouselContent className="ml-0">
+                                    {productImages.map((img, idx) => (
+                                        <CarouselItem key={idx} className="relative w-full pl-0 aspect-square sm:aspect-auto sm:h-[500px] lg:h-[600px]">
+                                            <div className="relative w-full h-full">
+                                                <Image
+                                                    src={img}
+                                                    alt={`Main Product Image ${idx + 1}`}
+                                                    fill
+                                                    className="object-cover"
+                                                    priority={idx === 0}
+                                                />
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                            </Carousel>
                         </div>
                     </div>
 

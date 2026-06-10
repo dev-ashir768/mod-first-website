@@ -1,8 +1,25 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage, AvatarGroupCount } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { motion, Variants } from "framer-motion";
+
+const badgeContainer: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.8,
+      staggerChildren: 0.15
+    }
+  }
+};
+
+const badgeItem: Variants = {
+  hidden: { opacity: 0, scale: 0 },
+  show: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 250, damping: 15 } }
+};
 
 export function Hero() {
   return (
@@ -14,16 +31,22 @@ export function Hero() {
       <div className="container relative z-10 flex min-h-[calc(100svh-5.05rem)] flex-1 flex-col lg:flex-row items-center gap-8 py-12 lg:py-20">
         {/* Left Content */}
         <div className="flex-1 w-full text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.5 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
             Large-Format Printing<br className="hidden md:block" /> for Every Event
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg text-white max-w-2xl mb-10 leading-relaxed font-normal">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-lg text-white max-w-2xl mb-10 leading-relaxed font-normal">
             From small business advertising to big event displays, Modfirst delivers bold, durable, and vibrant large-format prints that demand attention.
-          </p>
+          </motion.p>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-8 md:gap-12 mb-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}
+            className="flex flex-wrap gap-8 md:gap-12 mb-10">
             <div>
               <div className="text-4xl md:text-5xl font-extrabold mb-1">1k+</div>
               <div className="text-sm md:text-base text-white">Daily Customer</div>
@@ -36,11 +59,13 @@ export function Hero() {
               <div className="text-3xl md:text-5xl font-extrabold mb-1">50k+</div>
               <div className="text-sm md:text-base text-white">Projects Done</div>
             </div>
-          </div>
+          </motion.div>
           
-          <Button variant="default" size="xl">
-            Shop Now
-          </Button>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.5 }}>
+            <Button variant="default" size="xl">
+              Shop Now
+            </Button>
+          </motion.div>
         </div>
 
         {/* Right Content / Images Composition */}
@@ -49,32 +74,47 @@ export function Hero() {
 
             {/* Shirt Image */}
             <div className="absolute left-0 bottom-0 w-[67%] md:w-[60%] h-[80%] rounded-4xl overflow-hidden shadow-2xl z-10">
-              <Image
-                src="/images/banners-compositions/shirt.png"
-                alt="Custom Printed T-Shirt"
-                fill
-                className="object-cover"
-              />
+              <motion.div 
+                initial={{ opacity: 0, x: -40, y: 40 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
+                className="relative w-full h-full"
+              >
+                <Image
+                  src="/images/banners-compositions/shirt.png"
+                  alt="Custom Printed T-Shirt"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
             </div>
 
             {/* Notebooks Image */}
             <div className="absolute right-0 top-0 w-[55%] md:w-[46%] h-[55%] md:h-[65%] rounded-4xl overflow-hidden shadow-2xl z-20">
-              <Image
-                src="/images/banners-compositions/book.png"
-                alt="Custom Notebooks"
-                fill
-                className="object-cover"
-              />
+              <motion.div 
+                initial={{ opacity: 0, x: 40, y: -40 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+                className="relative w-full h-full"
+              >
+                <Image
+                  src="/images/banners-compositions/book.png"
+                  alt="Custom Notebooks"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
             </div>
 
             {/* Stamp Sticker */}
             <div className="absolute top-[15%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-28 h-28 md:w-36 md:h-36 z-30 drop-shadow-2xl">
-              <Image
-                src="/images/banners-compositions/stamp.svg"
-                alt="Feel the vibes stamp"
-                fill
-                className="object-contain animate-[spin_12s_linear_infinite]"
-              />
+              <motion.div 
+                initial={{ opacity: 0, scale: 0, rotate: -45 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ delay: 0.7, type: "spring", stiffness: 100 }}
+                className="relative w-full h-full"
+              >
+                <Image
+                  src="/images/banners-compositions/stamp.svg"
+                  alt="Feel the vibes stamp"
+                  fill
+                  className="object-contain animate-[spin_12s_linear_infinite]"
+                />
+              </motion.div>
             </div>
 
             {/* Satisfied Customer Badge */}
@@ -99,40 +139,44 @@ export function Hero() {
         </div>
 
         {/* Satisfied Customer Badge */}
-        <div className="hidden lg:flex absolute bottom-7 right-0 flex-col gap-3 z-30">
+        <motion.div 
+          variants={badgeContainer}
+          initial="hidden"
+          animate="show"
+          className="hidden lg:flex absolute bottom-7 right-0 flex-col gap-3 z-30">
           <div className="flex items-center justify-center px-4">
             <div className="flex flex-row justify-center items-center gap-6">
               <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 ">
-                <Avatar className="w-10 h-10">
-                  <AvatarImage src="/images/avatars/avatar-1.jpg" alt="avatar" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <Avatar className="w-10 h-10">
-                  <AvatarImage
-                    src="/images/avatars/avatar-2.jpg" alt="avatar"
-                  />
-                  <AvatarFallback>LR</AvatarFallback>
-                </Avatar>
-                <Avatar className="w-10 h-10">
-                  <AvatarImage
-                    src="/images/avatars/avatar-3.jpg"
-                    alt="avatar"
-                  />
-                  <AvatarFallback>ER</AvatarFallback>
-                </Avatar>
-                <Avatar className="w-10 h-10">
-                  <AvatarImage
-                    src="/images/avatars/avatar-4.jpg"
-                    alt="avatar"
-                  />
-                  <AvatarFallback>ER</AvatarFallback>
-                </Avatar>
+                <motion.div variants={badgeItem}>
+                  <Avatar className="w-10 h-10">
+                    <AvatarImage src="/images/avatars/avatar-1.jpg" alt="avatar" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </motion.div>
+                <motion.div variants={badgeItem}>
+                  <Avatar className="w-10 h-10">
+                    <AvatarImage src="/images/avatars/avatar-2.jpg" alt="avatar" />
+                    <AvatarFallback>LR</AvatarFallback>
+                  </Avatar>
+                </motion.div>
+                <motion.div variants={badgeItem}>
+                  <Avatar className="w-10 h-10">
+                    <AvatarImage src="/images/avatars/avatar-3.jpg" alt="avatar" />
+                    <AvatarFallback>ER</AvatarFallback>
+                  </Avatar>
+                </motion.div>
+                <motion.div variants={badgeItem}>
+                  <Avatar className="w-10 h-10">
+                    <AvatarImage src="/images/avatars/avatar-4.jpg" alt="avatar" />
+                    <AvatarFallback>ER</AvatarFallback>
+                  </Avatar>
+                </motion.div>
               </div>
             </div>
           </div>
           <div>
-            <div className="text-white font-medium text-center text-lg mb-1">Satisfied Customer</div>
-            <div className="flex justify-center items-center gap-1 text-sm w-full">
+            <motion.div variants={badgeItem} className="text-white font-medium text-center text-lg mb-1">Satisfied Customer</motion.div>
+            <motion.div variants={badgeItem} className="flex justify-center items-center gap-1 text-sm w-full">
               <div className="flex gap-1">
                 <Image src="/images/icons/star.svg" alt="star" width={15} height={15} />
                 <Image src="/images/icons/star.svg" alt="star" width={15} height={15} />
@@ -140,9 +184,9 @@ export function Hero() {
                 <Image src="/images/icons/star.svg" alt="star" width={15} height={15} />
               </div>
               <span className="text-white/60 text-base">/ 4.0</span>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

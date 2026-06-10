@@ -4,7 +4,7 @@ import { Button } from "../ui/button"
 export function VideoSection() {
   return (
     <section className="container pt-10 md:pt-12 lg:pt-16">
-      <div className="relative w-full rounded-[24px] md:rounded-[32px] overflow-hidden bg-zinc-900 aspect-video max-h-[600px] flex items-center justify-center">
+      <div className="relative w-full rounded-[24px] md:rounded-[32px] overflow-hidden bg-zinc-900 min-h-[400px] md:aspect-video md:max-h-[600px] flex items-center justify-center">
         {/* Background Video */}
         <video
           autoPlay

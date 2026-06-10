@@ -1,4 +1,37 @@
 import Image from "next/image"
+import { motion, Variants } from "framer-motion"
+
+const headerVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+}
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+}
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.15
+    }
+  }
+}
+
+const cardItemVariants: Variants = {
+  hidden: { opacity: 0, y: 15 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 150, damping: 15 } }
+}
 
 const steps = [
   {
@@ -31,31 +64,42 @@ export function OurOrderProcess() {
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-primary opacity-40 blur-[120px] rounded-full pointer-events-none translate-x-1/3 translate-y-1/3" />
 
         <div className="container relative z-10">
-          <div className="mb-6 md:mb-10">
+          <motion.div 
+            variants={headerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+            className="mb-6 md:mb-10">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight">Our Order Process</h2>
             <p className="text-[#E3D9D9] text-lg">From small business advertising to big event displays, Modfirst delivers bold.</p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, index) => {
               return (
-                <div
+                <motion.div
                   key={index}
+                  variants={cardVariants}
                   className="bg-[#191717] rounded-[20px] p-8 flex flex-col items-start"
                 >
-                  <div className="mb-8">
+                  <motion.div variants={cardItemVariants} className="mb-8">
                     <div className="relative w-18 h-18">
-                      <Image src={step.img_path} alt="User" fill className="w-full h-full object-contain" />
+                      <Image src={step.img_path} alt={step.title} fill className="w-full h-full object-contain" />
                     </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
-                  <p className="text-[#E3D9D9] text-base">
+                  </motion.div>
+                  <motion.h3 variants={cardItemVariants} className="text-xl font-bold text-white mb-4">{step.title}</motion.h3>
+                  <motion.p variants={cardItemVariants} className="text-[#E3D9D9] text-base">
                     {step.description}
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               )
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
