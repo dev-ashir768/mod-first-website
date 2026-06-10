@@ -48,11 +48,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}
             className="flex flex-wrap gap-8 md:gap-12 mb-10">
             <div>
-              <div className="text-4xl md:text-5xl font-extrabold mb-1">1k+</div>
+              <div className="text-3xl md:text-5xl font-extrabold mb-1">1k+</div>
               <div className="text-sm md:text-base text-white">Daily Customer</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-extrabold mb-1">27M+</div>
+              <div className="text-3xl md:text-5xl font-extrabold mb-1">27M+</div>
               <div className="text-sm md:text-base text-white">Printing Media</div>
             </div>
             <div>
