@@ -155,10 +155,10 @@ const ProductDetail = () => {
                                     <SelectValue placeholder="Size" />
                                 </SelectTrigger>
                                 <SelectContent>
-                                    <SelectItem value="small">Small (22" x 12")</SelectItem>
-                                    <SelectItem value="medium">Medium (22" x 24")</SelectItem>
-                                    <SelectItem value="large">Large (22" x 60")</SelectItem>
-                                    <SelectItem value="xlarge">X-Large (22" x 120")</SelectItem>
+                                    <SelectItem value="small">Small (22&quot; x 12&quot;)</SelectItem>
+                                    <SelectItem value="medium">Medium (22&quot; x 24&quot;)</SelectItem>
+                                    <SelectItem value="large">Large (22&quot; x 60&quot;)</SelectItem>
+                                    <SelectItem value="xlarge">X-Large (22&quot; x 120&quot;)</SelectItem>
                                 </SelectContent>
                             </Select>
                         </div>
@@ -183,7 +183,7 @@ const ProductDetail = () => {
                                     100% Satisfaction Guarantee
                                 </AccordionTrigger>
                                 <AccordionContent className="text-gray-600 text-base">
-                                    We stand behind our products. If you're not satisfied, we'll make it right.
+                                    We stand behind our products. If you&apos;re not satisfied, we&apos;ll make it right.
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="item-3" className="border-b-0 mb-2">

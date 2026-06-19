@@ -9,7 +9,7 @@ interface CartItemProps {
   image: string;
 }
 
-export const CartItem: React.FC<CartItemProps> = ({ id, title, price, quantity, image }) => {
+export const CartItem: React.FC<CartItemProps> = ({ title, price, quantity, image }) => {
   return (
     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-[#F4F4F5] p-4 rounded-[20px] w-full">
       {/* Product Image */}

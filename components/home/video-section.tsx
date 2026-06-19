@@ -26,7 +26,7 @@ export function VideoSection() {
             Watch How Your Custom<br className="hidden md:block" /> Prints Come To Life
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-white max-w-[775px] mx-auto mb-8 drop-shadow-md">
-            See how we print, pack, and deliver custom products with unmatched precision using ModFirst's signature technology.
+            See how we print, pack, and deliver custom products with unmatched precision using ModFirst&apos;s signature technology.
           </p>
           <Button variant="default" size="xl">
             Start your Order

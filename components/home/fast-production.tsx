@@ -41,7 +41,7 @@ export const FastProduction = () => {
             Fast Production &<br />Reliable Delivery
           </h2>
           <p className="text-[#666] text-base md:text-lg leading-relaxed max-w-lg">
-            Speed matters in the apparel industry and ModFirst understands it. Whether you're restocking your bestsellers, preparing for a pop-up event, or fulfilling last-minute customer requests, ModFirst delivers your DTF transfers fast and ready to press.
+            Speed matters in the apparel industry and ModFirst understands it. Whether you&apos;re restocking your bestsellers, preparing for a pop-up event, or fulfilling last-minute customer requests, ModFirst delivers your DTF transfers fast and ready to press.
           </p>
           <ul className="flex flex-col gap-3 mt-2">
             {features.map((feature, index) => (
